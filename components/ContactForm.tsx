@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-const ContactForm: Reactg.FC = () => {
+const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     company: '',
