@@ -1,41 +1,36 @@
-"use client";
+const projects = [
+  'Portrait Art',
+  'Canvas Art',
+  'Object Painting',
+  'Café Mural Art',
+  'Doodle Illustrations',
+  'Club Wall Art',
+  'Room Murals',
+  'Wall Murals',
+  'Temple Artwork',
+];
 
 export default function ProjectsSection() {
-  const projects = [
-    "Portrait Art",
-    "Canvas Art",
-    "Object Painting",
-    "Café Mural Art",
-    "Doodle Illustrations",
-    "Club Wall Art",
-    "Room Murals",
-    "Wall Murals",
-    "Temple Artwork",
-  ];
-
   return (
-    <section className="py-20 bg-white" id="projects">
-      <div className="text-center mb-10">
+    <section id="projects" className="scroll-mt-24 bg-white py-20">
+      <div className="mb-10 text-center">
         <h2 className="text-4xl font-bold text-gray-900">Featured Projects</h2>
-        <p className="text-gray-600 mt-2">A glimpse of creative artworks</p>
+        <p className="mt-2 text-gray-600">A glimpse of creative artworks</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 md:px-20">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+      <div className="grid grid-cols-1 gap-6 px-6 sm:grid-cols-2 md:grid-cols-3 md:px-20">
+        {projects.map((project) => (
+          <article
+            key={project}
+            className="group overflow-hidden rounded-xl shadow-md transition-shadow duration-300 hover:shadow-xl"
           >
-            {/* Image Frame (empty for now) */}
-            <div className="h-56 w-full bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500 text-sm">Image Placeholder</span>
+            <div className="flex h-56 w-full items-center justify-center bg-gray-200">
+              <span className="text-sm text-gray-500">Artwork image coming soon</span>
             </div>
-
-            {/* Title */}
-            <h3 className="text-center py-4 font-semibold text-gray-800 group-hover:text-black">
+            <h3 className="py-4 text-center font-semibold text-gray-800 transition group-hover:text-purple-700">
               {project}
             </h3>
-          </div>
+          </article>
         ))}
       </div>
     </section>
